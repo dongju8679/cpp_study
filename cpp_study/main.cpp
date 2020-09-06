@@ -1,21 +1,22 @@
 #include <iostream>
-#include <map>
-#include <string>
 
-using namespace std;
+
+namespace {
+	int OnlyInThisFile() { return 0; }
+	int only_in_this_file = 0;
+} // namespace
+
 
 int main() {
 	int ret = 0;
-
-	map<string, int> m;
-
-	m.insert(make_pair("a", 1));
-	m.insert(make_pair("b", 2));
-	m.insert(make_pair("c", 3));
-	m.insert(make_pair("d", 4));
-	m.insert(make_pair("e", 5));
-
 	std::cout << "start cpp_study" << std::endl;
+	OnlyInThisFile();
+	only_in_this_file = 3;
+
+	std::cout << "hi" << std::endl
+		<< "my name is "
+		<< "Psi" << std::endl;
+
 
 	return ret;
 }
